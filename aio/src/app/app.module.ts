@@ -42,6 +42,7 @@ import { SharedModule } from 'app/shared/shared.module';
 import { SwUpdatesModule } from 'app/sw-updates/sw-updates.module';
 
 import {environment} from '../environments/environment';
+import { ThemePickerModule } from './shared/theme-picker/theme-picker';
 
 // These are the hardcoded inline svg sources to be used by the `<mat-icon>` component.
 // tslint:disable: max-line-length
@@ -143,6 +144,7 @@ export const svgIconProviders = [
     MatToolbarModule,
     SwUpdatesModule,
     SharedModule,
+    ThemePickerModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
   ],
   declarations: [
