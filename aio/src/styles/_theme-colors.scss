@@ -1,0 +1,35 @@
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$ng-io-primary: mat-palette($mat-blue, 700, 600, 800);
+$ng-io-accent:  mat-palette($mat-red, 700, 600, 800);
+
+// The warn palette is optional (defaults to red).
+$ng-io-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ng-io-theme: mat-light-theme($ng-io-primary, $ng-io-accent, $ng-io-warn);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$ng-io-dark-primary: mat-palette($mat-blue-grey);
+$ng-io-dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ng-io-dark-warn:    mat-palette($mat-deep-orange);
+
+// Create your Sass color vars (will be available in all the project)
+// $dark-primary: mat-color($ng-io-primary);
+// $dark-accent: mat-color($ng-io-accent);
+// $dark-warn: mat-color($ng-io-warn);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ng-io-dark-theme: mat-dark-theme($ng-io-dark-primary, $ng-io-dark-accent, $ng-io-dark-warn);
+
+$dark-background: map-get($ng-io-dark-theme, background);
+$dark-foreground: map-get($ng-io-dark-theme, foreground);
+
+$dark-background-color: mat-color($dark-background, card);
+$dark-foreground-color: mat-color($dark-foreground, disabled-text);

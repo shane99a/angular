@@ -1,3 +1,5 @@
+@import '../theme-colors';
+
 html {
   font-size: 62.5%;
 }
@@ -12,7 +14,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $deepgray;
+  color: $dark-foreground-color;
 }
 
 h1 {
@@ -91,7 +93,7 @@ a {
   @include line-height(24);
   @include letter-spacing(0.3);
   font-weight: 400;
-  color: $darkgray;
+  color: $dark-foreground-color;
   & > em {
     @include letter-spacing(0.3);
   }
@@ -204,7 +206,7 @@ code {
 .folder-guide,
 .folder-start,
 .folder-tutorial {
-  
+
   aio-doc-viewer{
     a {
       &[href^="http:"]::after,
