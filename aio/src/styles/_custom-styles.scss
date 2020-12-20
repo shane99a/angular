@@ -1,0 +1,110 @@
+@mixin custom-styles($theme) {
+    $theme-primary: map-get($theme, primary);
+    $theme-accent: map-get($theme, accent);
+
+    $theme-background: map-get($theme, background);
+    $theme-foreground: map-get($theme, foreground);
+
+    $theme-primary-color: mat-color($theme-primary);
+    $theme-accent-color: mat-color($theme-accent);
+    $theme-background-color: mat-color($theme-background, background);
+    $theme-card-color: mat-color($theme-background, card);
+    $theme-foreground-color: mat-color($theme-foreground, text);
+    $theme-foreground-secondary-color: mat-color($theme-foreground, secondary-text);
+    $theme-drawer-background-color: mat-color($theme-background, dialog);
+    $theme-hover-background-color: mat-color($theme-background, hover);
+    $theme-selected-button-color: mat-color($theme-background, selected-button);
+
+    > .ng-io-container, .content {
+        background-color: $theme-background-color;
+    }
+
+    .heading {
+        color: $theme-foreground-color;
+    }
+
+    footer {
+        background-color: $theme-primary-color;
+    }
+
+    mat-sidenav-container.sidenav-container.mat-drawer-container.mat-sidenav-container, mat-sidenav-container .sidenav-content {
+        background-color: $theme-background-color;
+    }
+
+    mat-sidenav.mat-sidenav.sidenav {
+        background-color: $theme-drawer-background-color;
+    }
+
+    .toc-inner ul.toc-list li {
+        &.active a {
+            color: $theme-primary-color;
+
+            &:before {
+                background-color: $theme-primary-color;
+            }
+        }
+
+        &:hover a {
+            color: $theme-primary-color;
+        }
+
+        a {
+            color: $theme-foreground-secondary-color;
+        }
+    }
+
+    .vertical-menu-item {
+        color: $theme-foreground-color;
+
+        &:hover {
+            background-color: $theme-hover-background-color;
+            color: $theme-foreground-color;
+            text-shadow: 0 0 0px;
+        }
+
+        &.selected {
+            background-color: $theme-primary-color;
+            color: $theme-foreground-color;
+        }
+
+        &:focus {
+            color: $theme-foreground-color;
+            outline-width: 0px;
+            text-shadow: 0 0 0px;
+        }
+
+        &:focus, :not(&:selected) {
+            background-color: $theme-hover-background-color;
+        }
+    }
+
+    .form-select-button {
+        background-color: $theme-card-color;
+        color: $theme-foreground-secondary-color;
+        border-width: 0px;
+    }
+
+    .form-select-dropdown {
+        background-color: $theme-card-color;
+
+        li {
+            &:hover {
+                background-color: $theme-hover-background-color;
+                color: $theme-foreground-color;
+            }
+
+            &.selected {
+                background-color: $theme-primary-color;
+                color: $theme-foreground-color;
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $theme-foreground-color;
+    }
+
+    p, ol, ul, ol, li, input, a {
+        color: $theme-foreground-color;
+    }
+}

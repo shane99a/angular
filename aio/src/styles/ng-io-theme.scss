@@ -42,55 +42,24 @@ $purple-green-theme: mat-dark-theme($purple-green-primary, $purple-green-accent)
 // that you are using.
 @include angular-material-theme($ng-io-theme);
 
-@mixin custom-style($theme) {
-    $theme-background: map-get($theme, background);
-    $theme-foreground: map-get($theme, foreground);
-
-    $theme-background-color: mat-color($theme-background, card);
-    $theme-foreground-color: mat-color($theme-foreground, text);
-    $theme-drawer-background-color: mat-color($theme-background, dialog);
-
-    body, .content {
-        background-color: $theme-background-color;
-    }
-
-    .heading {
-        color: $theme-foreground-color
-    }
-
-    mat-sidenav-container.sidenav-container.mat-drawer-container.mat-sidenav-container, mat-sidenav-container .sidenav-content {
-        background-color: $theme-background-color;
-    }
-
-    mat-sidenav.mat-sidenav.sidenav {
-        background-color: $theme-drawer-background-color;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        color: $theme-foreground-color;
-    }
-
-    p, ol, ul, ol, li, input, a {
-        color: $theme-foreground-color;
-    }
-}
+@import 'custom-styles';
 
 .deeppurple-amber {
     @include angular-material-color($deeppurple-amber-theme);
-    @include custom-style($deeppurple-amber-theme);
+    @include custom-styles($deeppurple-amber-theme);
 }
 
 .indigo-pink {
     @include angular-material-color($indigo-pink-theme);
-    @include custom-style($indigo-pink-theme);
+    @include custom-styles($indigo-pink-theme);
 }
 
 .pink-bluegrey {
     @include angular-material-color($pink-bluegrey-theme);
-    @include custom-style($pink-bluegrey-theme);
+    @include custom-styles($pink-bluegrey-theme);
 }
 
 .purple-green {
     @include angular-material-color($purple-green-theme);
-    @include custom-style($purple-green-theme);
+    @include custom-styles($purple-green-theme);
 }
