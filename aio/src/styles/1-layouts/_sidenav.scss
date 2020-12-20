@@ -1,5 +1,3 @@
-@import '../theme-colors';
-
 // Disable sidenav animations for the initial render.
 .starting.mat-drawer-transition .mat-drawer-content {
   transition: none;
@@ -53,7 +51,7 @@ mat-sidenav-container.sidenav-container {
 
 mat-sidenav-container.sidenav-container.mat-drawer-container.mat-sidenav-container,
 mat-sidenav-container .sidenav-content {
-  background-color: $dark-background-color;
+  background-color: $white;
 }
 
 mat-sidenav-container div.mat-sidenav-content {
