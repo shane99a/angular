@@ -9,9 +9,11 @@
     $theme-primary-lighter-color: mat-color($theme-primary, lighter);
     $theme-primary-darker-color: mat-color($theme-primary, darker);
     $theme-accent-color: mat-color($theme-accent);
+    $theme-accent-darker-color: mat-color($theme-accent, darker);
     $theme-background-color: mat-color($theme-background, background);
     $theme-card-color: mat-color($theme-background, card);
     $theme-foreground-color: mat-color($theme-foreground, text);
+    $theme-divider-color: mat-color($theme-foreground, divider);
     $theme-foreground-secondary-color: mat-color($theme-foreground, secondary-text);
     $theme-dialog-background-color: mat-color($theme-background, dialog);
     $theme-hover-background-color: mat-color($theme-background, hover);
@@ -108,14 +110,14 @@
         &:not(.no-box) {
             background-color: rgba($theme-background-color, 0.5);
             color: $theme-foreground-color;
-            border: 1px solid rgba($theme-foreground-secondary-color, 0.2);
+            border-color: rgba($theme-foreground-secondary-color, 0.2);
         }
     }
 
     .content {
         .lightbox {
             background-color: $theme-card-color;
-            border: 1px solid rgba($theme-foreground-secondary-color, 0.2);
+            border-color: rgba($theme-foreground-secondary-color, 0.2);
         }
     }
 
@@ -130,6 +132,41 @@
 
         .banner-headline {
             color: #fff;
+        }
+    }
+
+    .card-container {
+        .docs-card {
+            background-color: $theme-card-color;
+            color: $theme-foreground-color;
+
+            &:hover {
+                section {
+                    color: $theme-accent-color;
+                }
+
+                p {
+                    color: $theme-foreground-color;
+                }
+
+                .card-footer {
+                    color: $theme-accent-color;
+                }
+
+            }
+
+            section {
+                color: $theme-foreground-color;
+            }
+
+            p {
+                color: $theme-foreground-color;
+            }
+
+            .card-footer {
+                color: $theme-foreground-secondary-color;
+                border-top-color: $theme-divider-color;
+            }
         }
     }
 
@@ -157,6 +194,23 @@
         thead > {
             tr > th {
                 color: $theme-foreground-color;
+                border-bottom-color: $theme-divider-color;
+            }
+        }
+
+        tbody > {
+            tr > th, tr > td {
+                color: $theme-foreground-color;
+                border-right-color: $theme-divider-color;
+                border-bottom-color: $theme-divider-color;
+
+                a {
+                    color: $theme-accent-color;
+
+                    &:hover {
+                        color: $theme-accent-darker-color;
+                    }
+                }
             }
         }
     }
