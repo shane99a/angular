@@ -9,6 +9,7 @@
     $theme-primary-lighter-color: mat-color($theme-primary, lighter);
     $theme-primary-darker-color: mat-color($theme-primary, darker);
     $theme-accent-color: mat-color($theme-accent);
+    $theme-accent-lighter-color: mat-color($theme-accent, lighter);
     $theme-accent-darker-color: mat-color($theme-accent, darker);
     $theme-background-color: mat-color($theme-background, background);
     $theme-card-color: mat-color($theme-background, card);
@@ -118,6 +119,10 @@
         .lightbox {
             background-color: $theme-card-color;
             border-color: rgba($theme-foreground-secondary-color, 0.2);
+
+            img {
+                background-color: $theme-divider-color;
+            }
         }
     }
 
@@ -168,6 +173,15 @@
                 border-top-color: $theme-divider-color;
             }
         }
+    }
+
+    .sidenav-content a:hover {
+        color: $theme-accent-color;
+    }
+
+    aio-resource-list .resource-row-link:hover {
+        border-color: $theme-accent-color;
+        @include mat-elevation(8);
     }
 
     aio-shell.page-features mat-toolbar.mat-toolbar,
