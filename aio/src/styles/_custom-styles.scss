@@ -77,17 +77,17 @@
 
         &:hover {
             background-color: $theme-hover-background-color;
-            color: $theme-accent-color;
+            color: $theme-accent-lighter-color;
             text-shadow: 0 0 0px;
         }
 
         &.selected {
-            background-color: $theme-hover-background-color;
-            color: $theme-accent-color;
+            background-color: $theme-dialog-background-color;
+            color: $theme-accent-lighter-color;
         }
 
         &:focus {
-            color: $theme-accent-color;
+            color: $theme-accent-lighter-color;
             outline-width: 0px;
             text-shadow: 0 0 0px;
         }
@@ -266,6 +266,7 @@
         tbody > {
             tr > th {
                 background-color: rgba($color: $theme-primary-color, $alpha: 0.2);
+                font-weight: normal;
             }
             tr > th, tr > td {
                 color: $theme-foreground-color;
@@ -315,6 +316,28 @@
     code-tabs.avoid mat-tab-body,
     code-tabs.avoidFile mat-tab-body {
         border: 0.5px solid $theme-warn-color;
+    }
+
+    .copy-button {
+        color: $theme-accent-color;
+        &:hover {
+            color: $theme-accent-lighter-color;
+        }
+    }
+
+    .lang-sh .copy-button, .lang-bash .copy-button {
+        color: $theme-accent-color;
+        &:hover {
+            color: $theme-accent-lighter-color;
+        }
+    }
+
+    .github-links {
+        .material-icons {
+            &:hover {
+                background-color: $theme-hover-background-color;
+            }
+        }
     }
 
     .filetree {
