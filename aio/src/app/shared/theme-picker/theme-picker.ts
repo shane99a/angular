@@ -8,11 +8,10 @@ import {
   } from '@angular/core';
   import {DocsSiteTheme, ThemeStorage} from './theme-storage/theme-storage';
   import {MatButtonModule} from '@angular/material/button';
-  import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
+  import {MatIconModule} from '@angular/material/icon';
   import {MatMenuModule} from '@angular/material/menu';
   import {MatTooltipModule} from '@angular/material/tooltip';
   import {CommonModule} from '@angular/common';
-  import {DomSanitizer} from '@angular/platform-browser';
 
   @Component({
     selector: 'theme-picker',
@@ -29,49 +28,25 @@ import {
       {
         primary: '#1976d2',
         accent: '#e91e63',
-        displayName: 'Default',
+        displayName: 'Light Theme',
+        background: '#ffffff',
         name: 'ng-io-theme',
-        isDark: false,
+        icon: 'light_mode'
       },
       {
         primary: '#673AB7',
         accent: '#FFC107',
-        displayName: 'Deep Purple & Amber',
-        name: 'deeppurple-amber',
-        isDark: false,
-      },
-      {
-        primary: '#3F51B5',
-        accent: '#E91E63',
-        displayName: 'Indigo & Pink',
-        name: 'indigo-pink',
-        isDark: false,
-      },
-      {
-        primary: '#E91E63',
-        accent: '#607D8B',
-        displayName: 'Pink & Blue-grey',
-        name: 'pink-bluegrey',
-        isDark: true,
-      },
-      {
-        primary: '#9C27B0',
-        accent: '#4CAF50',
-        displayName: 'Purple & Green',
-        name: 'purple-green',
-        isDark: true,
+        background: '#000000',
+        displayName: 'Night Theme',
+        name: 'night-theme',
+        icon: 'dark_mode'
       },
     ];
 
     defaultTheme: DocsSiteTheme = this.themes[0];
 
     constructor(
-                private themeStorage: ThemeStorage,
-                private iconRegistry: MatIconRegistry,
-                sanitizer: DomSanitizer) {
-      this.iconRegistry.addSvgIcon('theme-example',
-                              sanitizer.bypassSecurityTrustResourceUrl(
-                                  'assets/images/theme/theme-demo-icon.svg'));
+                private themeStorage: ThemeStorage) {
       const themeName = this.themeStorage.getStoredThemeName();
       if (themeName) {
         this.selectTheme(themeName);
