@@ -175,8 +175,13 @@
         }
     }
 
-    .sidenav-content a:hover {
-        color: $theme-accent-color;
+    .sidenav-content {
+        a {
+            color: $theme-accent-color;
+            &:hover {
+                color: $theme-accent-darker-color;
+            }
+        }
     }
 
     aio-resource-list .resource-row-link:hover {
