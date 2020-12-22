@@ -31,7 +31,7 @@
     }
 
     .text-headline {
-        color: #fff;
+        color: $theme-foreground-color;
     }
 
     footer {
@@ -133,7 +133,7 @@
         background-color: $theme-primary-color;
 
         .banner-headline {
-            color: #fff;
+            color: $theme-foreground-color;
         }
     }
 
@@ -183,12 +183,33 @@
 
     .announcement-bar .button {
         background-color: $theme-primary-color;
-        color: #fff;
+        color: $theme-foreground-color;
+    }
+
+    .group-buttons {
+        a {
+            &.selected {
+                background-color: $theme-primary-color;
+                color: $theme-foreground-color;
+            }
+        }
+    }
+
+    a.filter-button {
+        &:hover {
+            background-color: $theme-primary-color;
+            color: $theme-foreground-color;
+        }
     }
 
     aio-resource-list .resource-row-link:hover {
         border-color: $theme-accent-color;
         @include mat-elevation(8);
+    }
+
+    aio-resource-list .subcategory-title {
+        background-color: $theme-primary-color;
+        color: $theme-foreground-color;
     }
 
     aio-shell.page-features mat-toolbar.mat-toolbar,
@@ -242,7 +263,7 @@
 
     code-example.code-shell, code-example[language=sh], code-example[language=bash] {
         .pnk, .blk, .pln, .otl, .kwd, .typ, .tag, .str, .atv, .atn, .com, .lit, .pun, .dec {
-            color: #fff;
+            color: $theme-foreground-color;
         }
     }
 
@@ -275,7 +296,7 @@
         border: 4px solid $theme-divider-color;
 
         .file {
-            color: #fff;
+            color: $theme-foreground-color;
         }
     }
 
