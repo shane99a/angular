@@ -107,14 +107,6 @@
         }
     }
 
-    code-example {
-        &:not(.no-box) {
-            background-color: rgba($theme-background-color, 0.5);
-            color: $theme-foreground-color;
-            border-color: rgba($theme-foreground-secondary-color, 0.2);
-        }
-    }
-
     .content {
         .lightbox {
             background-color: $theme-card-color;
@@ -179,7 +171,7 @@
         a {
             color: $theme-accent-color;
             &:hover {
-                color: $theme-accent-darker-color;
+                color: $theme-accent-lighter-color;
             }
         }
     }
@@ -203,21 +195,21 @@
         color: $theme-foreground-color;
     }
 
-    code {
-        color: $theme-foreground-color;
-    }
-
     table {
         background-color: $theme-card-color;
 
         thead > {
             tr > th {
+                background-color: rgba($color: $theme-primary-color, $alpha: 0.5);
                 color: $theme-foreground-color;
                 border-bottom-color: $theme-divider-color;
             }
         }
 
         tbody > {
+            tr > th {
+                background-color: rgba($color: $theme-primary-color, $alpha: 0.5);
+            }
             tr > th, tr > td {
                 color: $theme-foreground-color;
                 border-right-color: $theme-divider-color;
@@ -227,10 +219,60 @@
                     color: $theme-accent-color;
 
                     &:hover {
-                        color: $theme-accent-darker-color;
+                        color: $theme-accent-lighter-color;
                     }
                 }
             }
         }
+    }
+
+    code {
+        color: $theme-foreground-color;
+    }
+
+    code-example.code-shell, code-example[language=sh], code-example[language=bash] {
+        .pnk, .blk, .pln, .otl, .kwd, .typ, .tag, .str, .atv, .atn, .com, .lit, .pun, .dec {
+            color: #fff;
+        }
+    }
+
+    code-example {
+        &:not(.no-box) {
+            background-color: #0d1117;
+            color: $theme-foreground-color;
+            border-color: rgba($theme-foreground-secondary-color, 0.2);
+        }
+
+        header {
+            background-color: $theme-primary-color;
+        }
+    }
+
+    .kwd, .tag {
+        color: #ff7b72;
+    }
+
+    .pln {
+        color: #fff;
+    }
+
+    .pun, .opn, .clo {
+        color: #8b949e;
+    }
+
+    .typ, .atn {
+        color: #79c0ff;
+    }
+
+    .lit {
+        color: #fff;
+    }
+
+    .str, .atv {
+        color: #a0e99d;
+    }
+
+    .com {
+        color: #8b949e;
     }
 }
