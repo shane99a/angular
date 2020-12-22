@@ -1,7 +1,7 @@
 @mixin custom-styles($theme) {
     $theme-primary: map-get($theme, primary);
     $theme-accent: map-get($theme, accent);
-
+    $theme-warn: map-get($theme, warn);
     $theme-background: map-get($theme, background);
     $theme-foreground: map-get($theme, foreground);
 
@@ -11,6 +11,7 @@
     $theme-accent-color: mat-color($theme-accent);
     $theme-accent-lighter-color: mat-color($theme-accent, lighter);
     $theme-accent-darker-color: mat-color($theme-accent, darker);
+    $theme-warn-color: mat-color($theme-warn);
     $theme-background-color: mat-color($theme-background, background);
     $theme-card-color: mat-color($theme-background, card);
     $theme-foreground-color: mat-color($theme-foreground, text);
@@ -27,6 +28,10 @@
 
     .heading {
         color: $theme-foreground-color;
+    }
+
+    .text-headline {
+        color: #fff;
     }
 
     footer {
@@ -109,7 +114,7 @@
 
     .content {
         .lightbox {
-            background-color: $theme-card-color;
+            background-color: $theme-background-color;
             border-color: rgba($theme-foreground-secondary-color, 0.2);
 
             img {
@@ -174,6 +179,11 @@
                 color: $theme-accent-lighter-color;
             }
         }
+    }
+
+    .announcement-bar .button {
+        background-color: $theme-primary-color;
+        color: #fff;
     }
 
     aio-resource-list .resource-row-link:hover {
@@ -246,6 +256,35 @@
         header {
             background-color: $theme-primary-color;
         }
+
+        &.avoid header, &.avoidFile header {
+            border: 2px solid $theme-warn-color;
+            background: $theme-warn-color;
+        }
+    }
+
+    code-example.avoid,
+    code-example.avoidFile,
+    code-tabs.avoid mat-tab-body,
+    code-tabs.avoidFile mat-tab-body {
+        border: 0.5px solid $theme-warn-color;
+    }
+
+    .filetree {
+        background: $theme-card-color;
+        border: 4px solid $theme-divider-color;
+
+        .file {
+            color: #a0e99d;
+        }
+    }
+
+    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+        background-color: $theme-accent-color;
+    }
+
+    .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+        color: $theme-accent-color;
     }
 
     .kwd, .tag {
