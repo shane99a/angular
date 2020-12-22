@@ -62,6 +62,14 @@
         a {
             color: $theme-foreground-color;
         }
+
+        &.active * {
+            color: $theme-accent-color;
+
+            &:before {
+                background: $theme-accent-color;
+            }
+        }
     }
 
     .vertical-menu-item {
@@ -137,6 +145,14 @@
         }
     }
 
+    .home-row .card {
+        background-color: $theme-card-color;
+
+        .card-text-container p {
+            color: $theme-foreground-color;
+        }
+    }
+
     .card-container {
         .docs-card {
             background-color: $theme-card-color;
@@ -169,6 +185,16 @@
                 color: $theme-foreground-secondary-color;
                 border-top-color: $theme-divider-color;
             }
+        }
+    }
+
+    .button.hero-cta {
+        background-color: #dd0031;
+        color: $theme-foreground-color;
+
+        &:hover {
+            background-color: #c3002f;
+            color: $theme-foreground-color;
         }
     }
 
@@ -231,7 +257,7 @@
 
         thead > {
             tr > th {
-                background-color: rgba($color: $theme-primary-color, $alpha: 0.5);
+                background-color: rgba($color: $theme-primary-color, $alpha: 0.2);
                 color: $theme-foreground-color;
                 border-bottom-color: $theme-divider-color;
             }
@@ -239,7 +265,7 @@
 
         tbody > {
             tr > th {
-                background-color: rgba($color: $theme-primary-color, $alpha: 0.5);
+                background-color: rgba($color: $theme-primary-color, $alpha: 0.2);
             }
             tr > th, tr > td {
                 color: $theme-foreground-color;
