@@ -122,11 +122,11 @@
 
     .content {
         .lightbox {
-            background-color: $theme-background-color;
+            background-color: $theme-card-color;
             border-color: rgba($theme-foreground-secondary-color, 0.2);
 
             img {
-                background-color: $theme-divider-color;
+                padding: 4px;
             }
         }
     }
@@ -188,6 +188,10 @@
         }
     }
 
+    .card-section {
+        background-color: $theme-card-color;
+    }
+
     .button.hero-cta {
         background-color: #dd0031;
         color: $theme-foreground-color;
@@ -226,6 +230,11 @@
             background-color: $theme-primary-color;
             color: $theme-foreground-color;
         }
+    }
+
+    .button.button-blue, a.button.mat-button.button-blue {
+        background-color: transparent;
+        border: 1px solid $theme-accent-color;
     }
 
     aio-resource-list .resource-row-link:hover {
