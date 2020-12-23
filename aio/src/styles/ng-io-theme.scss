@@ -29,7 +29,9 @@ $night-theme: mat-dark-theme($night-primary, $night-accent);
 
 @import 'custom-styles';
 
-.night-theme {
-    @include angular-material-color($night-theme);
-    @include custom-styles($night-theme);
+@media not print {
+    .night-theme {
+        @include angular-material-color($night-theme);
+        @include custom-styles($night-theme);
+    }
 }
