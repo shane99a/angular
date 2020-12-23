@@ -26,17 +26,42 @@
         color: $theme-foreground-color;
     }
 
+    .mat-tab-body {
+        background-color: #0d1117;
+    }
+
+    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+        background-color: $theme-accent-lighter-color;
+    }
+
+    .mat-tab-label {
+        color: $theme-foreground-color;
+        opacity: 1;
+    }
+
+    .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+        color: $theme-accent-lighter-color;
+    }
+
+    // src/styles/1-layouts/_sidenav.scss
+
     .heading {
         color: $theme-foreground-color;
     }
+
+    // src/styles/1-layouts/_marketing-layout.scss
 
     .text-headline {
         color: $theme-foreground-color;
     }
 
+    // src/styles/1-layouts/_footer.scss
+
     footer {
         background-color: $theme-primary-color;
     }
+
+    // src/styles/1-layouts/_sidenav.scss
 
     mat-sidenav-container.sidenav-container.mat-drawer-container.mat-sidenav-container, mat-sidenav-container .sidenav-content {
         background-color: $theme-background-color;
@@ -45,6 +70,8 @@
     mat-sidenav.mat-sidenav.sidenav {
         background-color: $theme-dialog-background-color;
     }
+
+    // src/styles/2-modules/_toc.scss
 
     .toc-inner ul.toc-list li {
         &.active a {
@@ -72,6 +99,8 @@
         }
     }
 
+    // src/styles/1-layouts/_sidenav.scss
+
     .vertical-menu-item {
         color: $theme-foreground-color;
 
@@ -98,6 +127,17 @@
         }
     }
 
+    .sidenav-content {
+        a {
+            color: $theme-accent-color;
+            &:hover {
+                color: $theme-accent-lighter-color;
+            }
+        }
+    }
+
+    // src/styles/2-modules/_select-menu.scss
+
     .form-select-button {
         background-color: $theme-card-color;
         color: $theme-accent-color;
@@ -120,6 +160,8 @@
         }
     }
 
+    // src/styles/2-modules/_images.scss
+
     .content {
         .lightbox {
             background-color: $theme-card-color;
@@ -131,7 +173,8 @@
         }
     }
 
-    // ANGULAR LINE
+    // src/styles/1-layouts/_marketing-layout.scss
+
     .background-sky {
         background-color: $theme-primary-color;
         background: linear-gradient(145deg, $theme-primary-darker-color, $theme-primary-color, $theme-primary-lighter-color);
@@ -152,6 +195,8 @@
             color: $theme-foreground-color;
         }
     }
+
+    // src/styles/2-modules/_card.scss
 
     .card-container {
         .docs-card {
@@ -192,6 +237,8 @@
         background-color: $theme-card-color;
     }
 
+    // src/styles/1-layouts/_marketing-layout.scss
+
     .button.hero-cta {
         background-color: #dd0031;
         color: $theme-foreground-color;
@@ -202,19 +249,12 @@
         }
     }
 
-    .sidenav-content {
-        a {
-            color: $theme-accent-color;
-            &:hover {
-                color: $theme-accent-lighter-color;
-            }
-        }
-    }
-
     .announcement-bar .button {
         background-color: $theme-primary-color;
         color: $theme-foreground-color;
     }
+
+    // src/styles/2-modules/_contributor.scss
 
     .group-buttons {
         a {
@@ -224,6 +264,8 @@
             }
         }
     }
+
+    // src/styles/2-modules/_buttons.scss
 
     a.filter-button {
         &:hover {
@@ -237,6 +279,8 @@
         border: 1px solid $theme-accent-color;
     }
 
+    // src/styles/2-modules/_resources.scss
+
     aio-resource-list .resource-row-link:hover {
         border-color: $theme-accent-color;
         @include mat-elevation(8);
@@ -247,11 +291,15 @@
         color: $theme-foreground-color;
     }
 
+    // src/styles/1-layouts/_top-menu.scss
+
     aio-shell.page-features mat-toolbar.mat-toolbar,
     aio-shell.page-events mat-toolbar.mat-toolbar,
     aio-shell.page-resources mat-toolbar.mat-toolbar {
         @include mat-elevation(6);
     }
+
+    // src/styles/0-base/_typography.scss
 
     h1, h2, h3, h4, h5, h6 {
         color: $theme-foreground-color;
@@ -260,6 +308,12 @@
     p, ol, ul, ol, li, input, a {
         color: $theme-foreground-color;
     }
+
+    code {
+        color: $theme-foreground-color;
+    }
+
+    // src/styles/2-modules/_table.scss
 
     table {
         background-color: $theme-card-color;
@@ -293,9 +347,7 @@
         }
     }
 
-    code {
-        color: $theme-foreground-color;
-    }
+    // src/styles/2-modules/_code.scss
 
     code-example.code-shell, code-example[language=sh], code-example[language=bash] {
         .pnk, .blk, .pln, .otl, .kwd, .typ, .tag, .str, .atv, .atn, .com, .lit, .pun, .dec {
@@ -341,40 +393,6 @@
         }
     }
 
-    .github-links {
-        .material-icons {
-            &:hover {
-                background-color: $theme-hover-background-color;
-            }
-        }
-    }
-
-    .filetree {
-        background: $theme-card-color;
-        border: 4px solid $theme-divider-color;
-
-        .file {
-            color: $theme-foreground-color;
-        }
-    }
-
-    .mat-tab-body {
-        background-color: #0d1117;
-    }
-
-    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-        background-color: $theme-accent-lighter-color;
-    }
-
-    .mat-tab-label {
-        color: $theme-foreground-color;
-        opacity: 1;
-    }
-
-    .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-        color: $theme-accent-lighter-color;
-    }
-
     .kwd, .tag {
         color: #ff7b72;
     }
@@ -401,5 +419,26 @@
 
     .com {
         color: #8b949e;
+    }
+
+    // src/styles/2-modules/_api-pages.scss
+
+    .github-links {
+        .material-icons {
+            &:hover {
+                background-color: $theme-hover-background-color;
+            }
+        }
+    }
+
+    // src/styles/2-modules/_filetree.scss
+
+    .filetree {
+        background: $theme-card-color;
+        border: 4px solid $theme-divider-color;
+
+        .file {
+            color: $theme-foreground-color;
+        }
     }
 }
