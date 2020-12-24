@@ -13,6 +13,7 @@
     $theme-accent-darker-color: mat-color($theme-accent, darker);
     $theme-warn-color: mat-color($theme-warn);
     $theme-background-color: mat-color($theme-background, background);
+    $theme-app-bar-color: mat-color($theme-background, app-bar);
     $theme-card-color: mat-color($theme-background, card);
     $theme-foreground-color: mat-color($theme-foreground, text);
     $theme-divider-color: mat-color($theme-foreground, divider);
@@ -316,11 +317,11 @@
     // src/styles/2-modules/_table.scss
 
     table {
-        background-color: $theme-card-color;
+        background-color: $theme-background-color;
 
         thead > {
             tr > th {
-                background-color: rgba($color: $theme-primary-color, $alpha: 0.2);
+                background-color: $theme-card-color;
                 color: $theme-foreground-color;
                 border-bottom-color: $theme-divider-color;
             }
@@ -328,7 +329,7 @@
 
         tbody > {
             tr > th {
-                background-color: rgba($color: $theme-primary-color, $alpha: 0.2);
+                background-color: $theme-card-color;
                 font-weight: normal;
             }
             tr > th, tr > td {
@@ -363,7 +364,7 @@
         }
 
         header {
-            background-color: $theme-primary-color;
+            background-color: $theme-app-bar-color;
         }
 
         &.avoid header, &.avoidFile header {
@@ -422,6 +423,10 @@
     }
 
     // src/styles/2-modules/_api-pages.scss
+
+    .api-body table th {
+        font-weight: normal;
+    }
 
     .github-links {
         .material-icons {
